@@ -2,12 +2,13 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class TeacherHelper {
-
-	public static final double horaAula = 17.50;
+	//Isso é uma constante: dar um nome a um valor. Mas isso é um bug, porque há uma constante para hora aula e pode haver diferentes valores para diferentes instituições.
+	// isso serve para fazer uma constante: public static final double horaAula = 17.50;
 	public static void main(String[] args) {
 		int opcao=0, numeroAulas, qtdeAlunos, i;
-		double salarioBase, horaAtividade, descansoSemanalRemunerado, salario, notaAluno, mediaAlunos;
+		double salarioBase, horaAtividade, descansoSemanalRemunerado, salario, notaAluno, mediaAlunos, horaAula;
 		
+		//Random é uma classe que forma números pseudo aleatórios.
 		Random gerador = new Random();
 		
 		Scanner leitor = new Scanner(System.in);
@@ -27,6 +28,8 @@ public class TeacherHelper {
 				 * http://www1.sinprosp.org.br/guia_consultas.asp?mat=8*/
 				System.out.println("Para calcular seu salário base precisamos saber quantas aulas semanais o professor tem na instituição");
 				numeroAulas = leitor.nextInt();
+				System.out.println("Por favor, informe o valor da hora aula praticada na sua escola.");
+				horaAula = leitor.nextDouble();
 				salarioBase = numeroAulas * 4.5 * horaAula;
 				horaAtividade = salarioBase * 0.05;
 				descansoSemanalRemunerado = (salarioBase + horaAtividade) / 6;
