@@ -19,9 +19,13 @@ public class TeacherHelper {
 			System.out.println("1 - Calcular salário");
 			System.out.println("2 - Calcular média de notas dos alunos");
 			System.out.println("3 - Exibir a motivação do dia!");
+			System.out.println("4 - Sair");
 			opcao = leitor.nextInt();
 			
 			switch (opcao) {
+			case 0:
+				System.out.println("Você é o responsável pelos alunos perderem os cabelos com fatorial!");
+				break;
 			case 1:
 				/*O salário dos professores de escolas particulares em
 				 * São Paulo é composto da seguinte forma 
